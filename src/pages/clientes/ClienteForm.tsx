@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { registrarNovoCliente } from '../../services/ClienteService';
 import { Cliente, Endereco, Telefone } from '../../models/interfaces';
 
 
 export default function ClienteForm() {
+    const navigate = useNavigate();
     const [cliente, setCliente] = useState<Cliente>({
         id: 0,
         nome: '',
@@ -83,7 +84,6 @@ export default function ClienteForm() {
         const resposta = await registrarNovoCliente(cliente);
         console.log(resposta);
         // setMensagem('Cliente registrado com sucesso!');
-
         // Reset do formulário
         setCliente({
             id: 0,
@@ -111,6 +111,8 @@ export default function ClienteForm() {
             ],
             links: []
         });
+        navigate("/clientes");
+
     };
 
     return (
