@@ -56,13 +56,6 @@ export default function HomePage() {
                                         <i className="bi bi-arrow-right ms-auto opacity-50"></i>
                                     </button>
                                 </a>
-                                <a href="/fornecedores" className="text-decoration-none">
-                                    <button className="btn btn-outline-primary w-100 text-start d-flex align-items-center">
-                                        <i className="bi bi-truck me-2"></i>
-                                        <span>Fornecedores</span>
-                                        <i className="bi bi-arrow-right ms-auto opacity-50"></i>
-                                    </button>
-                                </a>
                             </div>
                             <div className="card-footer bg-white border-top-0">
                                 <p className="text-muted small">Acesse e gerencie todos os cadastros do sistema</p>
@@ -108,13 +101,6 @@ export default function HomePage() {
                                         <i className="bi bi-arrow-right ms-auto opacity-50"></i>
                                     </button>
                                 </a>
-                                <a href="/fornecedores/novo" className="text-decoration-none">
-                                    <button className="btn btn-outline-primary w-100 text-start d-flex align-items-center">
-                                        <i className="bi bi-truck me-2"></i>
-                                        <span>Novo Fornecedor</span>
-                                        <i className="bi bi-arrow-right ms-auto opacity-50"></i>
-                                    </button>
-                                </a>
                             </div>
                             <div className="card-footer bg-white border-top-0">
                                 <p className="text-muted small">Acesse e gerencie todos os cadastros do sistema</p>
@@ -133,20 +119,6 @@ export default function HomePage() {
                                 <p className="card-text text-muted">Registre compras e vendas do seu petshop</p>
                             </div>
                             <div className="card-body d-grid gap-3">
-                                <a href="/compras" className="text-decoration-none">
-                                    <button className="btn btn-outline-success w-100 text-start d-flex align-items-center">
-                                        <i className="bi bi-receipt me-2"></i>
-                                        <span>Listagem de Compras</span>
-                                        <i className="bi bi-arrow-right ms-auto opacity-50"></i>
-                                    </button>
-                                </a>
-                                <a href="/compras/novo" className="text-decoration-none">
-                                    <button className="btn btn-outline-success w-100 text-start d-flex align-items-center">
-                                        <i className="bi bi-cart me-2"></i>
-                                        <span>Registro de Compra</span>
-                                        <i className="bi bi-arrow-right ms-auto opacity-50"></i>
-                                    </button>
-                                </a>
                                 <a href="/vendas" className="text-decoration-none">
                                     <button className="btn btn-outline-success w-100 text-start d-flex align-items-center">
                                         <i className="bi bi-receipt me-2"></i>
@@ -166,7 +138,29 @@ export default function HomePage() {
                                 <p className="text-muted small">Registre e acompanhe todas as transações financeiras</p>
                             </div>
                         </div>
-                        
+                    </div>
+                    <div className="col-md-3">
+                        <div className="card h-100 border-subtle shadow-sm">
+                            <div className="card-header bg-white border-bottom-0 pb-0">
+                                <h2 className="card-title text-dark fs-3 d-flex align-items-center">
+                                    <i className="bi bi-graph-up me-2"></i>
+                                    Estatísticas
+                                </h2>
+                                <p className="card-text text-muted">Visualize dados e métricas do seu petshop</p>
+                            </div>
+                            <div className="card-body d-grid gap-3">
+                                <a href="/estatisticas" className="text-decoration-none">
+                                    <button className="btn btn-outline-info w-100 text-start d-flex align-items-center">
+                                        <i className="bi bi-graph-up me-2"></i>
+                                        <span>Dashboard</span>
+                                        <i className="bi bi-arrow-right ms-auto opacity-50"></i>
+                                    </button>
+                                </a>
+                            </div>
+                            <div className="card-footer bg-white border-top-0">
+                                <p className="text-muted small">Acompanhe o desempenho do seu negócio</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
