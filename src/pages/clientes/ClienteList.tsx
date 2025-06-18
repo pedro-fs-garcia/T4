@@ -52,17 +52,17 @@ export default function ClienteList() {
     });
 
 
-    const deletarCliente = async (id:number) => {
-            const confirmacao = window.confirm("Tem certeza que deseja excluir este cliente?");
-            if (!confirmacao) return;
+    const deletarCliente = async (id: number) => {
+        const confirmacao = window.confirm("Tem certeza que deseja excluir este cliente?");
+        if (!confirmacao) return;
 
-            const resultado = await excluirCliente(id);
+        const resultado = await excluirCliente(id);
 
-            if (resultado) {
-                window.location.reload(); // recarrega a página após exclusão
-            } else {
-                alert("Erro ao excluir cliente.");
-            }
+        if (resultado) {
+            window.location.reload(); // recarrega a página após exclusão
+        } else {
+            alert("Erro ao excluir cliente.");
+        }
     }
 
 
@@ -80,6 +80,23 @@ export default function ClienteList() {
 
     return (
         <div className="container py-4">
+            <h1 >Gerenciamento de clientes</h1>
+            <div className="container-fluid px-0 py-6 mb-3">
+                <div className="row">
+                    <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-3 mb-md-0">
+                        <div className="p-0">
+                            <a href="/clientes/novo" className="text-decoration-none">
+                                <button className="btn btn-outline-primary shadow-sm w-100 text-start d-flex align-items-center">
+                                    <i className="bi bi-people me-2"></i>
+                                    <span>Novo cliente</span>
+                                    <i className="bi bi-arrow-right ms-auto opacity-50"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div className="card shadow-sm mb-4">
                 <div className="card-body">
                     <div className="input-group">
